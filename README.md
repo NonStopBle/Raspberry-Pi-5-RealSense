@@ -123,7 +123,7 @@ chmod +x example.py
 
 
 ## Testing Script
-- In this video, I use a Raspberry Pi 5 with 8GB RAM running Ubuntu 24.04 and an HDMI capture device to stream the display to OBS on my notebook because I don't have a monitor.
+- In this video, I use a Raspberry Pi 5 with 8GB RAM running Ubuntu 24.04 and an HDMI capture device to stream the display to OBS on my notebook .
 
 - Hardware
   - Raspberry Pi 5 Model B 8GB
