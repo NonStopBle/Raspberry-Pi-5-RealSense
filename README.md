@@ -1,6 +1,14 @@
 # Raspberry Pi 5 with RealSense on Ubuntu 22.04
 # This wiki is modify from https://github.com/datasith/Ai_Demos_RPi/wiki/Raspberry-Pi-4-and-Intel-RealSense-D435 to can use with ubuntu 22.04 in raspberry pi 5  
 
+
+## Hardware
+  - Raspberry Pi 5 Model B 8GB
+  - Intel Realsense D435
+
+## Operating System
+  - Ubuntu 24.04 
+
 ## Pre-install Requirements
 * Start by updating, upgrading, and installing dependencies and tools:
 ```bash
@@ -88,4 +96,15 @@ sudo -H pip3 install pyopengl_accelerate
 * Require display and desktop user to access realsense-viewer
 ```bash
 realsense-viewer
+```
+
+### Test Realsense Library on Python :
+( Script : https://github.com/mathklk/realsense_raspberry_pi4 )
+- Download the example python script from this repo
+```bash
+cd ~
+wget https://raw.githubusercontent.com/mathklk/realsense_raspberry_pi4/master/example.py
+chmod +x example.py
+```
+- Run the script (requires a desktop environment to show the image)
 ```
