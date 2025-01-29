@@ -1,4 +1,4 @@
-# Raspberry Pi 5 with RealSense on Ubuntu 22.04
+# Raspberry Pi 5 with RealSense on Ubuntu 24.04
 # This wiki is modify from https://github.com/datasith/Ai_Demos_RPi/wiki/Raspberry-Pi-4-and-Intel-RealSense-D435 to can use with ubuntu 22.04 in raspberry pi 5  
 
 
