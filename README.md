@@ -54,10 +54,6 @@ export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION_VERSION=3
 sudo ldconfig
 protoc --version
 ```
-### Install `libtbb-dev`:
-```bash
-sudo apt-get install libtbb-dev
-```
 ### Install RealSense SDK (`librealsense`):
 ```bash
 cd ~/librealsense
