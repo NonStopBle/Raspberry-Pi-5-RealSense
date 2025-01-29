@@ -62,15 +62,15 @@ sudo apt-get install libtbb-dev
 ```bash
 cd ~/librealsense
 mkdir build && cd build
-cmake .. -DBUILD_EXAMPLES=true -DCMAKE_BUILD_TYPE=Release -DFORCE_LIBUVC=true
-make -j$(nproc)
+sudo cmake .. -DBUILD_EXAMPLES=true -DCMAKE_BUILD_TYPE=Release -DFORCE_LIBUVC=true
+sudo make -j1
 sudo make install
 ```
 ### Install RealSense SDK Python bindings (`pyrealsense2`):
 ```bash
 cd ~/librealsense/build
-cmake .. -DBUILD_PYTHON_BINDINGS=bool:true -DPYTHON_EXECUTABLE=$(which python3)
-make -j$(nproc)
+sudo cmake .. -DBUILD_PYTHON_BINDINGS=bool:true -DPYTHON_EXECUTABLE=$(which python3)
+sudo make -j1
 sudo make install
 ```
 Modify the Python path:
