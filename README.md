@@ -134,8 +134,4 @@ chmod +x example.py
 
 
 # Testing Video
-![e8f17f69-ce15-425f-8366-d7bb56b7d7db-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e39822ef-949b-48e8-8642-2196ed3263e8)
-
-
-
-
+![e8f17f69-ce15-425f-8366-d7bb56b7d7db-ezgif com-optimize](https://github.com/user-attachments/assets/378d46ad-ac77-4fe8-a8a7-1c75318bd525)
