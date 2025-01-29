@@ -1,6 +1,5 @@
 # Raspberry Pi 5 with RealSense on Ubuntu 24.04
-# This document is modify from https://github.com/mathklk/realsense_raspberry_pi4 to can use with ubuntu 24.04 on raspberry pi 5  
-
+# This document is modified from https://github.com/mathklk/realsense_raspberry_pi4 to be compatible with Ubuntu 24.04 on the Raspberry Pi 5.
 
 ## Hardware
   - Raspberry Pi 5 Model B 8GB
