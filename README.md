@@ -7,18 +7,12 @@
 sudo apt-get update && sudo apt-get dist-upgrade
 sudo apt-get install automake libtool vim cmake libusb-1.0-0-dev libx11-dev xorg-dev libglu1-mesa-dev
 ```
-* Increase swap to 2GB by modifying the following file:
+
 ```bash
-sudo vi /etc/dphys-swapfile
+sudo apt-get install clang
+sudo apt-get install libtbb-dev
 ```
-Change the line to:
-```bash
-CONF_SWAPSIZE=2048
-```
-Apply the change:
-```bash
-sudo /etc/init.d/dphys-swapfile restart
-swapon -s
+
 ```
 * Create a new `udev` rule:
 ```bash
@@ -81,11 +75,11 @@ sudo make install
 ```
 Modify the Python path:
 ```bash
-export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.12/dist-packages:/home/net/librealsense/build/Release
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.12/dist-packages:/home/$(whoami)/librealsense/build/Release
 ```
 Persist the change:
 ```bash
-echo 'export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.12/dist-packages:/home/net/librealsense/build/Release' >> ~/.bashrc
+echo 'export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.12/dist-packages:/home/$(whoami)/librealsense/build/Release' >> ~/.bashrc
 source ~/.bashrc
 ```
 ### Install `OpenGL`:
@@ -94,53 +88,3 @@ sudo apt-get install python3-opengl
 sudo -H pip3 install pyopengl
 sudo -H pip3 install pyopengl_accelerate
 ```
-
-## Remote Operation
-* Enable `VNC`:
-```bash
-sudo apt install realvnc-vnc-server realvnc-vnc-viewer
-```
-Enable VNC server:
-```bash
-sudo systemctl enable vncserver-x11-serviced
-sudo systemctl start vncserver-x11-serviced
-```
-
-Connect to the Raspberry Pi 5 using a VNC client such as [VNC Viewer by RealVNC](https://www.realvnc.com/en/connect/download/viewer/).
-
-## Debugging
-### Error: "Could not initialize offscreen context!"
-If you encounter this error:
-```bash
-realsense-viewer
-Could not initialize offscreen context!
-```
-Ensure you are running VNC correctly:
-```bash
-glxinfo | grep "OpenGL renderer"
-```
-Expected output:
-```
-OpenGL renderer string: V3D 4.2
-```
-If it shows `llvmpipe`, reconfigure VNC:
-```bash
-sudo raspi-config
-# Navigate to Advanced Options -> GL Driver -> G2 GL (Fake KMS)
-```
-
-### Error: "GLFW Driver Error: GLX: GLX version 1.3 is required"
-Ensure OpenGL is correctly installed and configured:
-```bash
-sudo apt-get install --reinstall xserver-xorg-core
-sudo dpkg-reconfigure xserver-xorg
-```
-
-## Running RealSense Viewer
-Start the viewer with:
-```bash
-realsense-viewer
-```
-
-For further debugging, refer to [Intel RealSense Issues](https://github.com/IntelRealSense/librealsense/issues).
-
