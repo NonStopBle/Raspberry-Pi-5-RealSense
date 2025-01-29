@@ -121,3 +121,19 @@ chmod +x example.py
 ```
 - Run the script (requires a desktop environment to show the image)
 
+
+## Testing Script
+- In this video, I use a Raspberry Pi 5 with 8GB RAM running Ubuntu 24.04 and an HDMI capture device to stream the display to OBS on my notebook because I don't have a monitor.
+
+- Hardware
+  - Raspberry Pi 5 Model B 8GB
+  - Intel Realsense D435
+  - HDMI Capture (Display on notebook with OBS Studio)
+
+![Screenshot from 2025-01-30 00-20-22](https://github.com/user-attachments/assets/7c4bc622-f622-4b80-87bd-f093f7805940)
+
+![e8f17f69-ce15-425f-8366-d7bb56b7d7db-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e39822ef-949b-48e8-8642-2196ed3263e8)
+
+
+
+
