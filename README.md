@@ -88,3 +88,8 @@ sudo apt-get install python3-opengl
 sudo -H pip3 install pyopengl
 sudo -H pip3 install pyopengl_accelerate
 ```
+### Launch `Realsense Viewer`:
+* Require display and desktop user to access realsense-viewer
+```bash
+realsense-viewer
+```
