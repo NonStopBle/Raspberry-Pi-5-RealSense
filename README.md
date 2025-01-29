@@ -130,8 +130,10 @@ chmod +x example.py
   - Intel Realsense D435
   - HDMI Capture (Display on notebook with OBS Studio)
 
+# Testing Video
+![e8f17f69-ce15-425f-8366-d7bb56b7d7db-ezgif com-optimize](https://github.com/user-attachments/assets/378d46ad-ac77-4fe8-a8a7-1c75318bd525)
+
+# Hardware
 ![Automatic Pipe Feeder](https://github.com/user-attachments/assets/154f375a-8afd-4f8e-bd1a-38272b85c9e2)
 
 
-# Testing Video
-![e8f17f69-ce15-425f-8366-d7bb56b7d7db-ezgif com-optimize](https://github.com/user-attachments/assets/378d46ad-ac77-4fe8-a8a7-1c75318bd525)
