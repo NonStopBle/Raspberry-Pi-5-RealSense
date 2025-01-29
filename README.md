@@ -1,5 +1,5 @@
 # Raspberry Pi 5 with RealSense on Ubuntu 24.04
-# This document is modify from https://github.com/datasith/Ai_Demos_RPi/wiki/Raspberry-Pi-4-and-Intel-RealSense-D435 to can use with ubuntu 24.04 on raspberry pi 5  
+# This document is modify from https://github.com/mathklk/realsense_raspberry_pi4 to can use with ubuntu 24.04 on raspberry pi 5  
 
 
 ## Hardware
@@ -62,26 +62,40 @@ export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION_VERSION=3
 sudo ldconfig
 protoc --version
 ```
+
+## Change default C/C++ compiler to clang ([#9962](https://github.com/IntelRealSense/librealsense/issues/9962))
+```
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+```
+
 ### Install RealSense SDK (`librealsense`):
 ```bash
 cd ~/librealsense
 mkdir build && cd build
 sudo cmake .. -DBUILD_EXAMPLES=true -DCMAKE_BUILD_TYPE=Release -DFORCE_LIBUVC=true
-sudo make -j1
+sudo make -j4
 sudo make install
 ```
 ### Install RealSense SDK Python bindings (`pyrealsense2`):
 ```bash
 cd ~/librealsense/build
 sudo cmake .. -DBUILD_PYTHON_BINDINGS=bool:true -DPYTHON_EXECUTABLE=$(which python3)
-sudo make -j1
+sudo make -j4
 sudo make install
 ```
-Modify the Python path:
+
+- Change the default compiler back to gcc
+```
+unset CC
+unset CXX
+```
+
+- Modify the Python path:
 ```bash
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.12/dist-packages:/home/$(whoami)/librealsense/build/Release
 ```
-Persist the change:
+- Persist the change:
 ```bash
 echo 'export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.12/dist-packages:/home/$(whoami)/librealsense/build/Release' >> ~/.bashrc
 source ~/.bashrc
